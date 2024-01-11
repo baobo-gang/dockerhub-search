@@ -34,6 +34,7 @@ class Ui_Form(object):
         self.label.setGeometry(QtCore.QRect(370, 30, 121, 16))
         self.label.setObjectName("label")
         self.textEdit_2 = QtWidgets.QTextEdit(Form)
+        self.textEdit_2.setStyleSheet("font-size : 18px;")
         self.textEdit_2.setGeometry(QtCore.QRect(110, 150, 811, 621))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -95,10 +96,8 @@ class Ui_Form(object):
                     repo_name = result['repo_name']
                     self.textEdit_2.append(f'docker pull {repo_name}')
                     QtWidgets.QApplication.processEvents()
-                    print(f'docker pull {repo_name}')
             else:
                 self.textEdit_2.append(f'Error: {response.status_code}, {response.text}')
-                print(f'Error: {response.status_code}, {response.text}')
 
 
 if __name__ == '__main__':
