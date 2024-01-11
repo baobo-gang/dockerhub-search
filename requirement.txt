@@ -1,0 +1,3 @@
+requests
+PyQt5-tools -i https://pypi.douban.com/simple
+PyQt5 -i https://pypi.douban.com/simple
